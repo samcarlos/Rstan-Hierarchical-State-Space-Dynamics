@@ -91,7 +91,7 @@ matrix[L*P+L-1,L*P+L-1] Sigma_beta;
 mu_beta ~ normal(0, 1);
 Sigma_beta <- quad_form_diag(Omega,tau);
 tau ~ cauchy(0,2.5);
-\
+
 Omega ~ lkj_corr(5);
 for(n in 1:N) beta[n]~multi_normal(mu_beta,Sigma_beta);
 sigmasq_y ~ inv_gamma(0.001, 0.001);
