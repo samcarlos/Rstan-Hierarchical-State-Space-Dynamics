@@ -69,7 +69,7 @@ model {
   sigmasq_y ~ inv_gamma(0.001, 0.001);
   sigmasq_theta ~inv_gamma(0.001, 0.001);
 
-  for(n in 1:N) theta_innovation[n]~normal(0,1);
+  for(t in 1:T) theta_innovation[t]~normal(0,1);
 
   for (n in 1:N)
     for (t in (2+L):T){
