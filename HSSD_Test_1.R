@@ -48,6 +48,7 @@ transformed parameters {
         lagged_theta[n,t]<-beta[n,P*L+l]*theta[n,t-l] + lagged_theta[n,t];
 
 
+  for(n in 1:N) for(t in 1:(L+1)) theta[n,t]<-y_data[t,n];
 
 
   for (n in 1:N)
